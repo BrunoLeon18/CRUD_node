@@ -6,7 +6,7 @@ import 'dotenv/config';
 User;
 
 const PORT = process.env.PORT ?? 8000;
-console.log(process.env)
+
 db.authenticate()
   .then(() => console.log("Conexion correcta"))
   .catch((err) => console.log(err));
@@ -20,7 +20,7 @@ db.sync()
 const app = express();
 app.use(express.json());
 
-app.get("/", (res, req) => {
+app.get("/", ( req, res) => {
   res.send("OK");
 });
 
